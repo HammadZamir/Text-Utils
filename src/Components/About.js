@@ -1,31 +1,5 @@
-import React, {useState} from 'react'
 
 export default function About(props) {
-
-    const darkBtn = ()=>{
-        if(myStyle.color === "white"){
-           setMyStyle({
-                color : "black",
-                backgroundColor : "white",
-               })
-               setBtnText("Dark Mode")
-        }
-        else {
-            setMyStyle({
-                color : "white",
-                backgroundColor : "rgb(44, 54, 57)",
-               })
-               setBtnText("Light Mode")
-        }
-    }
-
-    const [btnText , setBtnText ] = useState("Light Mode");
-
-   const [myStyle , setMyStyle] = useState({
-     color : "white",
-     backgroundColor : "rgb(44, 54, 57)",
-    });
-
   
 
   return (
@@ -70,7 +44,7 @@ export default function About(props) {
     </div>
   </div>
 </div>
-<button className="btn btn-primary my-3" >{btnText}</button>
+
     </div>
   )
 }

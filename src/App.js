@@ -1,18 +1,16 @@
 import './App.css';
 import React, { useState } from 'react'
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link,
-//   Routes
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 
 
 import Navbar from "./Components/Navbar";
 import Alert from "./Components/Alert";
 import TextArea from './Components/TextArea';
-// import About from "./Components/About";
+import About from "./Components/About";
 
 function App() {
 
@@ -30,14 +28,14 @@ function App() {
     changeAlert("light" , "light mood has been enabled");
   }
 
-  const onClick3 = ()=>{                              // function for dark mode
+  const onClick3 = ()=>{                              // function for primary mode
     setMode("primary");
     document.body.style.backgroundColor = "#5cbfc6";
     document.body.style.color = "black";
     changeAlert("primary" , "primary mood has been enabled");
   }
 
-  const onClick4 = ()=>{                              // function for dark mode
+  const onClick4 = ()=>{                              // function for danger mode
     setMode("danger");
     document.body.style.backgroundColor = "#EE7674";
     document.body.style.color = "black";
@@ -66,18 +64,17 @@ function App() {
   return (
     <>
 
-    {/* <Router> */}
+    <Router>
 
      <Navbar mode={mode} toggleMode={onClick} toggleMode2={onClick2} toggleMode3={onClick3} toggleMode4={onClick4}/>
      <Alert alert={alert}/>
-     <TextArea mode={mode} changeAlert={changeAlert}  heading="Enter the Text"/>
-     {/* <About mode={mode} */}
-     {/* <Routes> */}
-        {/* <Route exact path="/about" element={<About mode={mode} />} /> */}
-        {/* <Route exact path="/" element={<TextArea mode={mode} changeAlert={changeAlert}  heading="Enter the Text"/>} /> */}
-      {/* </Routes> */}
+     
+     <Routes>
+         <Route exact path="/about" element={<About mode={mode} />} /> 
+         <Route exact path="/" element={<TextArea mode={mode} changeAlert={changeAlert}  heading="Enter the Text"/>} /> 
+      </Routes>
       
-      {/* </Router> */}
+      </Router>
      
     </>
   );

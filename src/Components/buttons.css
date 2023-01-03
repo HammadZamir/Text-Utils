@@ -1,6 +1,7 @@
 
 .lightMode{
     background: white;
+    width: 30px;
     /* border: 1px solid black; */
     border-radius: 50%;
     cursor: pointer;
@@ -8,18 +9,21 @@
 
 .darkMode{
     background: rgb(44, 54, 57);
+    width: 30px;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .primaryMode{
     background: #5cbfc6;
+    width: 30px;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .dangerMode{
     background: #EE7674;
+    width: 30px;
     border-radius: 50%;
     cursor: pointer;
 }
